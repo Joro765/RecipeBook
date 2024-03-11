@@ -1,0 +1,124 @@
+header {
+    background-color: rgb(255, 166, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAV LOGO */
+
+.site-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.site-header .logo {
+    font-size: 1.6em;
+}
+
+
+
+/* NAV LINKS */
+
+
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+
+nav ul li {
+    padding: 0.2em 0.4em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+@media (min-width:500px) {
+    .site-header .logo {
+        font-size: 2em;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+}
+
+
+/* TABLET */
+
+@media (min-width:600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-header {
+        margin-left: 3em;
+    }
+
+    nav ul {
+        margin: 0;
+        gap: 1em;
+        margin-right: 2em;
+    }
+
+
+    nav ul li a:hover {
+        color: white;
+        text-shadow: 0 0 5px #ffffff;
+        transition: all 0.2s ease-in;
+    }
+
+    .site-header .logo:hover {
+        color: white;
+        text-shadow: 0 0 5px #ffffff;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+}
+
+
+/* PC */
+
+@media (min-width: 1000px) {
+    nav ul {
+        gap: 2em;
+    }
+
+    nav ul li a {
+        padding: 0.5em 0.7em;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        text-shadow: 0 0 5px #ffffff;
+        transition: all 0.2s ease-in;
+
+    }
+
+    .site-header .logo:hover {
+        color: white;
+        text-shadow: 0 0 5px #ffffff;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+}
