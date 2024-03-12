@@ -20,6 +20,11 @@ header {
     font-weight: bold;
 }
 
+.site-header .logo a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
 
 
 /* NAV LINKS */

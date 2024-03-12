@@ -1,0 +1,176 @@
+/* BANNER */
+
+.banner {
+    padding: 1em 0;
+    color: #333333e6;
+    margin-top: 2em;
+}
+
+.banner h1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+
+}
+
+.banner p {
+    max-width: 80%;
+    margin: 0 auto;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.6em;
+}
+
+.banner span {
+    color: #f68235;
+}
+
+
+/* CARDS */
+
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.cards-wrapper .title {
+    color: #f68235;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.card {
+    background-color: #f68235;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width:500px) {
+    .banner h1 {
+        font-size: 2.2em;
+    }
+
+    .cards.wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        background-color: #f68235;
+        width: 250px;
+        height: 250px;
+    }
+
+    .cards-wrapper .title {
+        font-size: 1.5em;
+    }
+
+    .banner {
+        margin-bottom: 2em;
+    }
+
+}
+
+
+@media (min-width:700px) {
+    .banner h1 {
+        font-size: 3em;
+    }
+
+    .banner p {
+        font-size: 0.9em;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+
+    .title-wrapper {
+        margin-bottom: 1.5em;
+        font-size: 1.5em;
+    }
+
+    .banner {
+        margin-bottom: 3.5em;
+    }
+
+}
+
+
+@media (min-width:1000px) {
+    .banner h1 {
+        font-size: 3.5em;
+    }
+
+    .banner p {
+        font-size: 1.1em;
+    }
+
+    .banner {
+        margin-bottom: 5em;
+    }
+
+    .cards {
+        gap: 3em;
+    }
+
+    .card {
+        background-color: #f68235;
+        width: 300px;
+        height: 300px;
+    }
+
+    .title-wrapper {
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .cards-wrapper {
+        margin-bottom: 5em;
+    }
+}
+
+
+
+@media (min-width:1300px) {
+    .banner h1 {
+        font-size: 4em;
+    }
+
+    .banner p {
+        font-size: 1.2em;
+    }
+
+    .cards {
+        gap: 3.5em;
+    }
+
+    .banner {
+        margin-bottom: 8em;
+    }
+}
