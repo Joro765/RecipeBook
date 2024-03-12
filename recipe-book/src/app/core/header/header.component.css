@@ -1,5 +1,5 @@
 header {
-    background-color: rgb(255, 166, 0);
+    background-color: #f68235;
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@ header {
 
 .site-header .logo {
     font-size: 1.6em;
+    font-weight: bold;
 }
 
 
