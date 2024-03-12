@@ -75,10 +75,11 @@ h6 {
 body {
     min-height: 100vh;
     position: relative;
-    padding-bottom: 100px;
+    margin: auto;
 }
 
-main {
-    max-width: 80vw;
-    margin: 0 auto;
+.container {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 3em;
 }
