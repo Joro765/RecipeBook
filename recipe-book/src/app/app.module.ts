@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { FooterComponent } from './core/footer/footer.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { UserModule } from './user/user.module';
+import { RecipeModule } from './recipe/recipe.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
   imports: [
     BrowserModule,
     CoreModule,
+    UserModule,
+    RecipeModule,
     AppRoutingModule, // Винаги най-отдолу заради error page !!!
   ],
   providers: [],
