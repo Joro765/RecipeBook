@@ -57,8 +57,65 @@
     background-color: #f68235;
     width: 200px;
     height: 200px;
+    border-radius: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 0 1em 0.3em rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-size: 0.6em;
 }
 
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1em 0.3em rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.card:hover .recipe-title {
+    transition: all 0.3s;
+    letter-spacing: 0.2em;
+}
+
+
+.card:not(hover) .recipe-title {
+    transition: all 0.3s;
+    letter-spacing: 0;
+}
+
+
+
+
+/* CARD CONTENT */
+
+.card .category {
+    border: 1px solid #333333e6;
+    background-color: white;
+    color: #333333e6;
+    border-radius: 0.4em;
+    padding: 0.1em 0.4em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+.card .recipe-title {
+    color: #333333e6;
+    text-align: center;
+    flex: 0 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .media {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -80,6 +137,7 @@
         background-color: #f68235;
         width: 250px;
         height: 250px;
+        font-size: 1em;
     }
 
     .cards-wrapper .title {
