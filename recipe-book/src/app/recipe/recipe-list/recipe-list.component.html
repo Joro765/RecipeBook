@@ -1,1 +1,23 @@
-<p>recipe-list works!</p>
+<div class="container">
+    <app-welcome-msg></app-welcome-msg>
+    <div class="cards-wrapper">
+        <div class="title-wrapper">
+            <h2 class="title">Top Recipes</h2>
+        </div>
+        <div class="cards">
+            <div class="card" *ngFor="let recipe of recipes">
+                <div class="media">
+                    <img *ngIf="recipe.img.length > 1" src={{recipe.img}} alt="">
+                    <img *ngIf="recipe.img < 1" src='../../assets/no-image.jpg' alt="">
+                    <p class="category">{{recipe.category}}</p>
+                </div>
+                <div class="recipe-title">
+                    <p>{{recipe.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="load-more">
+        <button (click)="loadMore()">Load More</button>
+    </div>
+</div>

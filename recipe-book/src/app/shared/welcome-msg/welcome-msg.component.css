@@ -1,0 +1,115 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+
+.welcome .msg {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333333e6;
+}
+
+.welcome .msg h2 {
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.welcome .msg p {
+    font-size: 0.6em;
+    font-style: italic;
+}
+
+
+
+
+.welcome .buttons {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-size: 0.8em;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.welcome .buttons button {
+    background-color: #f68235;
+    color: white;
+    border-radius: 0.3em;
+    border-color: #f68235;
+    padding: 0.1em 0.2em;
+}
+
+
+.welcome .buttons button:hover {
+    text-shadow: 0 0 5px #ffffff;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+@media (min-width:500px) {
+    .welcome .msg {
+        font-size: 1.5em;
+    }
+
+
+    .welcome .buttons button {
+        font-size: 1.3em;
+    }
+
+    .welcome .buttons {
+        gap: 1.5em;
+    }
+
+
+}
+
+@media (min-width:700px) {
+    .welcome .msg {
+        font-size: 1.8em;
+    }
+
+
+    .welcome .buttons button {
+        font-size: 1.3em;
+        padding: 0.2em 0.6em;
+    }
+
+
+    .welcome .buttons {
+        gap: 2.5em;
+    }
+
+
+}
+
+
+
+@media (min-width:1000px) {
+    .welcome .msg {
+        font-size: 2em;
+    }
+
+
+    .welcome .buttons button {
+        font-size: 1.5em;
+        padding: 0.1em 0.6em;
+    }
+
+    .welcome .buttons {
+        gap: 3em;
+
+    }
+
+
+}

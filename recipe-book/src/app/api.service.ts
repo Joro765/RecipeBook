@@ -10,10 +10,24 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
-
+  // top recipes for home page
   getTopRecipes() {
     const api = this.apiUrl;
+    return this.http.get(`${api}/recipes?offset=0&pageSize=6`)
+  }
 
-    return this.http.get(`${api}/recipes`)
+
+  // sorted by category
+  getSortedRecipes(category: string) {
+    const api = this.apiUrl;
+    return this.http.get(`${api}/recipes?where=category%20LIKE%20%22dessert%22`);
+  }
+
+
+  // reguest for pagination
+  getAllRecipes(x: string) {
+    const offset = Number(x)
+    const api = this.apiUrl;
+    return this.http.get(`${api}/recipes?offset=${offset}&pageSize=6`)
   }
 }

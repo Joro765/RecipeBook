@@ -1,0 +1,266 @@
+/* BANNER */
+
+.banner {
+    padding: 1em 0;
+    color: #333333e6;
+    margin-top: 2em;
+}
+
+.banner h1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+
+}
+
+.banner p {
+    max-width: 80%;
+    margin: 0 auto;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.6em;
+}
+
+.banner span {
+    color: #f68235;
+}
+
+
+/* CARDS */
+
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.cards-wrapper .title {
+    color: #f68235;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.card {
+    background-color: #f68235;
+    width: 200px;
+    height: 200px;
+    border-radius: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 0 1em 0.3em rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-size: 0.6em;
+}
+
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1em 0.3em rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.card:hover .recipe-title {
+    transition: all 0.3s;
+    letter-spacing: 0.2em;
+}
+
+
+.card:not(hover) .recipe-title {
+    transition: all 0.3s;
+    letter-spacing: 0;
+}
+
+
+
+
+/* CARD CONTENT */
+
+.card .category {
+    border: 1px solid #333333e6;
+    background-color: white;
+    color: #333333e6;
+    border-radius: 0.4em;
+    padding: 0.1em 0.4em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+.card .recipe-title {
+    color: #333333e6;
+    text-align: center;
+    flex: 0 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .media {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.load-more {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+    font-size: 0.8em;
+}
+
+.load-more button {
+    background-color: #f68235;
+    color: white;
+    border-radius: 0.3em;
+    border-color: #f68235;
+    padding: 0.1em 0.2em;
+}
+
+.load-more button:hover {
+    text-shadow: 0 0 5px #ffffff;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width:500px) {
+    .banner h1 {
+        font-size: 2.2em;
+    }
+
+    .cards.wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        background-color: #f68235;
+        width: 250px;
+        height: 250px;
+        font-size: 1em;
+    }
+
+    .cards-wrapper .title {
+        font-size: 1.5em;
+    }
+
+    .banner {
+        margin-bottom: 2em;
+    }
+
+    .load-more button {
+        font-size: 1.3em;
+    }
+
+}
+
+
+@media (min-width:700px) {
+    .banner h1 {
+        font-size: 3em;
+    }
+
+    .banner p {
+        font-size: 0.9em;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+
+    .title-wrapper {
+        margin-bottom: 1.5em;
+        font-size: 1.5em;
+    }
+
+    .banner {
+        margin-bottom: 3.5em;
+    }
+
+
+    .load-more button {
+        font-size: 1.5em;
+        padding: 0.2em 0.6em;
+    }
+}
+
+
+@media (min-width:1000px) {
+    .banner h1 {
+        font-size: 3.5em;
+    }
+
+    .banner p {
+        font-size: 1.1em;
+    }
+
+    .banner {
+        margin-bottom: 5em;
+    }
+
+    .cards {
+        gap: 3em;
+    }
+
+    .card {
+        background-color: #f68235;
+        width: 300px;
+        height: 300px;
+    }
+
+    .title-wrapper {
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .cards-wrapper {
+        margin-bottom: 5em;
+    }
+}
+
+
+
+@media (min-width:1300px) {
+    .banner h1 {
+        font-size: 4em;
+    }
+
+    .banner p {
+        font-size: 1.2em;
+    }
+
+    .cards {
+        gap: 3.5em;
+    }
+
+    .banner {
+        margin-bottom: 8em;
+    }
+}

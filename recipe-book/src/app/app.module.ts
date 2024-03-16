@@ -9,6 +9,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserModule } from './user/user.module';
 import { RecipeModule } from './recipe/recipe.module';
 import { HomeComponent } from './home/home.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     CoreModule,
     UserModule,
     RecipeModule,
+    SharedModule,
     HttpClientModule,
     AppRoutingModule, // Винаги най-отдолу заради error page !!!
   ],
