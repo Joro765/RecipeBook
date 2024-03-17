@@ -9,6 +9,7 @@ import { ApiService } from 'src/app/api.service';
 export class RecipeListComponent implements OnInit {
   recipes: any = [];
   offset: string = "";
+  isLoading: boolean = false;
 
 
   constructor(private api: ApiService) { }
@@ -26,8 +27,12 @@ export class RecipeListComponent implements OnInit {
 
 
     // Initial load with 6 recipes
+
+    this.isLoading = true;
     this.api.getAllRecipes("0").subscribe(recipes => {
       this.recipes = recipes;
+
+      this.isLoading = false;
 
       this.offset = JSON.stringify(this.recipes.length);
     })
@@ -40,7 +45,6 @@ export class RecipeListComponent implements OnInit {
     this.api.getAllRecipes(this.offset).subscribe(recipes => {
       const responseData = recipes;
       this.recipes.push(...<[]>responseData);
-      console.log(this.recipes);
 
       this.offset = JSON.stringify(this.recipes.length);
 

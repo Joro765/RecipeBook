@@ -4,6 +4,7 @@
         <div class="title-wrapper">
             <h2 class="title">Top Recipes</h2>
         </div>
+        <app-loader *ngIf="isLoading"></app-loader>
         <div class="cards">
             <div class="card" *ngFor="let recipe of recipes">
                 <div class="media">

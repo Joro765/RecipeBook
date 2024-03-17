@@ -8,6 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit {
   recipes: any = [];
+  isLoading: boolean = false;
 
 
   constructor(private api: ApiService) { }
@@ -15,10 +16,11 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.isLoading = true;
+
     this.api.getTopRecipes().subscribe(recipes => {
       this.recipes = recipes;
-      console.log(this.recipes);
-
+      this.isLoading = false;
     })
   }
 
