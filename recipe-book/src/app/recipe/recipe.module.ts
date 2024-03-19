@@ -4,12 +4,14 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeRoutingModule } from './recipe-routing.module';
 import { WelcomeMsgComponent } from '../shared/welcome-msg/welcome-msg.component';
 import { SharedModule } from '../shared/shared.module';
+import { CurrentRecipeComponent } from './current-recipe/current-recipe.component';
 
 
 
 @NgModule({
   declarations: [
-    RecipeListComponent
+    RecipeListComponent,
+    CurrentRecipeComponent
   ],
   imports: [
     CommonModule,

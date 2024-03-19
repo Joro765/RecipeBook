@@ -1,0 +1,151 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+    gap: 2em;
+    color: #333333e6;
+    margin-bottom: 3em;
+}
+
+
+.details .media {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.details .media img {
+    max-width: 300px;
+}
+
+.details .info {
+    flex: 1 1 60%;
+    padding: 0 1em;
+    border: 2px solid #f68235;
+    border-radius: 0.3em;
+    background-color: #f6f5f5;
+}
+
+
+.info h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.icons {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+.icons p {
+    padding: 1em;
+}
+
+
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8em;
+    color: #333333e6;
+    border: 2px solid #f68235;
+    border-radius: 0.3em;
+    background-color: #f6f5f5;
+}
+
+
+.instructions ul li {
+    padding: 0.2em;
+}
+
+
+.instructions h4 {
+    font-weight: bold;
+}
+
+
+.instructions .ingredients {
+    flex: 1 1 40%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.instructions .steps {
+    flex: 1 1 40%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.instructions .steps ul {
+    list-style: decimal;
+}
+
+
+
+@media (min-width:800px) {
+    .details {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .icons {
+        flex-direction: row;
+    }
+
+
+    .instructions {
+        flex-direction: row;
+        max-width: 60%;
+    }
+
+
+}
+
+
+@media (min-width:1000px) {
+    .details {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .instructions {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+}
+
+
+@media (min-width:1200px) {
+    .details .media {
+        justify-content: flex-start;
+    }
+
+
+    .details .media img {
+        max-width: 400px;
+    }
+
+
+}

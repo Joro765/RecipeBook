@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="details">
+        <div class="media">
+            <img src="{{recipe.img}}" alt="">
+        </div>
+        <div class="info">
+            <h3>{{recipe.name}}</h3>
+            <p>{{recipe.description}}</p>
+            <div class="icons">
+                <p><i class="fa-solid fa-clock fa-xl"></i> {{recipe.time}}</p>
+                <p><i class="fa-solid fa-kitchen-set fa-xl"></i> {{recipe.difficulty}}</p>
+                <p><i class="fa-solid fa-utensils fa-xl"></i> {{recipe.servings}} people</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="instructions">
+        <div class="ingredients">
+            <h4>Ingredients</h4>
+            <ul>
+                <li *ngFor="let igredient of recipe.ingredients">{{igredient}}</li>
+            </ul>
+        </div>
+        <div class="steps">
+            <h4>Cooking Steps</h4>
+            <ul>
+                <li *ngFor="let step of recipe.steps">{{step}}</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>

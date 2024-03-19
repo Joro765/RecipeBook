@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Recipe } from './types/Recipe';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,13 @@ export class ApiService {
     const offset = Number(x)
     const api = this.apiUrl;
     return this.http.get(`${api}/recipes?offset=${offset}&pageSize=6`)
+  }
+
+
+
+  // get a single recipe by ID
+  getRecipe(id: string) {
+    const api = this.apiUrl;
+    return this.http.get<Recipe>(`${api}/recipes/${id}`)
   }
 }

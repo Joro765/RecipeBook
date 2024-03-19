@@ -12,8 +12,10 @@
         <div class="cards">
             <div class="card" *ngFor="let recipe of recipes">
                 <div class="media">
-                    <img *ngIf="recipe.img.length > 1" src={{recipe.img}} alt="">
-                    <img *ngIf="recipe.img < 1" src='../../assets/no-image.jpg' alt="">
+                    <a [routerLink]="recipe._id">
+                        <img *ngIf="recipe.img.length > 1" src={{recipe.img}} alt="">
+                        <img *ngIf="recipe.img < 1" src='../../assets/no-image.jpg' alt="">
+                    </a>
                     <p class="category">{{recipe.category}}</p>
                 </div>
                 <div class="recipe-title">
