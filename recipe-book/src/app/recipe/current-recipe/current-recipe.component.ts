@@ -11,17 +11,20 @@ import { Recipe } from 'src/app/types/Recipe';
 export class CurrentRecipeComponent implements OnInit {
   recipe = {} as Recipe;
   recipeId: string = "";
+  isLoading: boolean = false;
 
   constructor(private api: ApiService, private route: ActivatedRoute) { }
 
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.route.params.subscribe(params => {
       this.recipeId = params["recipeId"];
     })
 
     this.api.getRecipe(this.recipeId).subscribe(recipe => {
       this.recipe = recipe;
+      this.isLoading = false;
 
     })
   }

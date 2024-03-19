@@ -3,7 +3,7 @@
         <div class="media">
             <img src="{{recipe.img}}" alt="">
         </div>
-        <div class="info">
+        <div class="info" *ngIf="!isLoading">
             <h3>{{recipe.name}}</h3>
             <p>{{recipe.description}}</p>
             <div class="icons">
@@ -14,8 +14,11 @@
         </div>
     </div>
 
+    <div class="loading">
+        <app-loader *ngIf="isLoading"></app-loader>
+    </div>
 
-    <div class="instructions">
+    <div class="instructions" *ngIf="!isLoading">
         <div class="ingredients">
             <h4>Ingredients</h4>
             <ul>
