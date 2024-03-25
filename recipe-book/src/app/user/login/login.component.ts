@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(private userService: UserService, private router: Router) { }
+
+
+
+  login(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+
+    console.log(form.value);
+
+  }
 }

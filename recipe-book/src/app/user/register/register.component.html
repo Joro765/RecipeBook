@@ -1,1 +1,64 @@
-<p>register works!</p>
+<div class="container">
+    <div class="form-wrapper">
+        <div class="title">
+            <h2>Register Form</h2>
+        </div>
+        <form #form="ngForm" (ngSubmit)="register(form)">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="enter your email..." ngModel
+                    #inputEmail="ngModel" required appEmail>
+
+                <ng-container *ngIf="inputEmail.touched">
+                    <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+                    <p class="error" *ngIf="inputEmail.errors?.['invalidEmail'] && inputEmail.value.length > 0">Email is
+                        invalid!</p>
+                </ng-container>
+            </div>
+
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="enter your username..." ngModel
+                    #inputUsername="ngModel" required>
+
+                <ng-container *ngIf="inputUsername.touched">
+                    <p class="error" *ngIf="inputUsername.errors?.['required']">Username is required!</p>
+                </ng-container>
+            </div>
+
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="enter your password..." ngModel
+                    #inputPassword="ngModel" required minlength="4">
+
+                <ng-container *ngIf="inputPassword.touched">
+                    <p class="error" *ngIf="inputPassword.errors?.['required']">Password is required!</p>
+                    <p class="error" *ngIf="inputPassword.errors?.['minlength']">Password must be at least 4 characters!
+                    </p>
+                </ng-container>
+            </div>
+
+
+            <div class="form-group">
+                <label for="Confirmpassword">Confirm Password</label>
+                <input type="password" name="Confirmpassword" id="Confirmpassword" placeholder="enter your password..."
+                    ngModel #inputConfirmPassword="ngModel" required minlength="4">
+
+                <ng-container *ngIf="inputConfirmPassword.touched">
+                    <p class="error" *ngIf="inputConfirmPassword.errors?.['required']">Password is required!</p>
+                    <p class="error" *ngIf="inputConfirmPassword.errors?.['minlength']">Password must be at least 4
+                        characters!
+                    </p>
+                    <p class="error"
+                        *ngIf="inputConfirmPassword.value != inputPassword.value && inputConfirmPassword.value.length > 0">
+                        Passwords don't match!
+                    </p>
+                </ng-container>
+            </div>
+            <button>Register</button>
+            <p class="text">Have an account?<a routerLink="/login">Login</a></p>
+        </form>
+    </div>
+</div>

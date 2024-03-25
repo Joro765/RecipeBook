@@ -1,0 +1,134 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto;
+    max-width: 700px;
+    border: 2px solid #f68235;
+    border-radius: 0.3em;
+    background-color: #f6f5f5;
+}
+
+.form-wrapper .title {
+    width: 100%;
+    text-align: center;
+    background-color: #f68235;
+    color: rgb(255, 255, 255);
+}
+
+.form-wrapper .title h2 {
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 0;
+    padding: 1em;
+}
+
+
+
+form {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 350px;
+    min-height: 80px;
+}
+
+
+form .form-group input {
+    width: 100%;
+}
+
+
+form button {
+    background-color: #f68235;
+    color: white;
+    border-radius: 0.3em;
+    border-color: #f68235;
+    padding: 0.1em 0.4em;
+}
+
+
+
+form button:hover {
+    text-shadow: 0 0 5px #ffffff;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+form .text {
+    font-size: 0.7em;
+}
+
+
+form .text a {
+    color: #f68235;
+    padding: 0.2em;
+}
+
+
+
+
+
+
+p.error {
+    font-size: 0.8em;
+    color: red;
+}
+
+
+
+
+
+@media (min-width: 500px) {
+    .form-wrapper .title h2 {
+        font-size: 1.6em;
+    }
+
+    form button {
+        padding: 0.1em 0.6em;
+    }
+
+    form .text {
+        font-size: 1em;
+    }
+
+}
+
+
+@media (min-width: 700px) {
+    .form-wrapper .title h2 {
+        font-size: 2em;
+    }
+
+    form button {
+        padding: 0.1em 0.8em;
+    }
+}
+
+
+
+@media (min-width: 1000px) {
+    .form-wrapper .title h2 {
+        font-size: 2.2em;
+    }
+
+    form button {
+        padding: 0.1em 1.2em;
+    }
+}
