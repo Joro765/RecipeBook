@@ -1,8 +1,14 @@
 <div class="container">
-    <app-welcome-msg></app-welcome-msg>
+    <!-- <app-welcome-msg></app-welcome-msg> -->
+    <div class="banner site">
+        <h1>Calling all culinary creators! </h1>
+        <p>Share the love, the flavor, and the joy of cooking by submitting your recipe to <span>RecipeBook</span>
+            today.</p>
+        <button routerLink="/add-recipe">Submit Recipe</button>
+    </div>
     <div class="cards-wrapper">
         <div class="title-wrapper">
-            <h2 class="title">Top Recipes</h2>
+            <h2 class="title">All Recipes</h2>
         </div>
         <app-loader *ngIf="isLoading"></app-loader>
         <div class="cards">

@@ -83,14 +83,16 @@ form .text a {
 
 
 
-
-
-
 p.error {
     font-size: 0.8em;
     color: red;
 }
 
+
+button:disabled {
+    opacity: 0.3;
+    cursor: none;
+}
 
 
 

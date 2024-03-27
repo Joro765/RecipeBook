@@ -4,11 +4,12 @@
     justify-content: center;
     align-items: center;
     margin: 5em auto;
-    max-width: 700px;
+    max-width: 1000px;
     border: 2px solid #f68235;
     border-radius: 0.3em;
     background-color: #f6f5f5;
 }
+
 
 .form-wrapper .title {
     width: 100%;
@@ -17,13 +18,12 @@
     color: rgb(255, 255, 255);
 }
 
+
 .form-wrapper .title h2 {
     font-weight: bold;
     font-size: 1.4em;
-    line-height: 0;
     padding: 1em;
 }
-
 
 
 form {
@@ -32,7 +32,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 3em;
     width: 100%;
 }
 
@@ -44,7 +44,7 @@ form .form-group {
     align-items: flex-start;
     flex: 1 0 auto;
     width: 100%;
-    max-width: 350px;
+    max-width: 700px;
     min-height: 80px;
 }
 
@@ -52,6 +52,38 @@ form .form-group {
 form .form-group input {
     width: 100%;
 }
+
+
+form .selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+
+form .selectors .form-group {
+    max-width: 150px;
+    min-height: 120px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.form-group textarea {
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+}
+
+
+.form-group:has(textarea) {
+    height: 150px;
+}
+
 
 
 form button {
@@ -71,23 +103,10 @@ form button:hover {
 }
 
 
-form .text {
-    font-size: 0.7em;
-}
-
-
-form .text a {
-    color: #f68235;
-    padding: 0.2em;
-}
-
-
-
 p.error {
     font-size: 0.8em;
     color: red;
 }
-
 
 button:disabled {
     opacity: 0.3;
@@ -95,40 +114,16 @@ button:disabled {
 }
 
 
-@media (min-width: 500px) {
-    .form-wrapper .title h2 {
-        font-size: 1.6em;
-    }
 
-    form button {
-        padding: 0.1em 0.6em;
-    }
-
-    form .text {
-        font-size: 1em;
-    }
-
-}
-
-
-@media (min-width: 700px) {
-    .form-wrapper .title h2 {
-        font-size: 2em;
-    }
-
-    form button {
-        padding: 0.1em 0.8em;
-    }
-}
+@media (min-width:500px) {}
 
 
 
-@media (min-width: 1000px) {
-    .form-wrapper .title h2 {
-        font-size: 2.2em;
-    }
 
-    form button {
-        padding: 0.1em 1.2em;
+@media (min-width:700px) {
+    form .selectors {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }

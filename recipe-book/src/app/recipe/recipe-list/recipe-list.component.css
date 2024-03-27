@@ -4,6 +4,10 @@
     padding: 1em 0;
     color: #333333e6;
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner h1 {
@@ -19,7 +23,6 @@
     margin: 0 auto;
     font-style: italic;
     text-align: center;
-    opacity: 0.7;
     font-size: 0.6em;
 }
 
@@ -28,8 +31,27 @@
 }
 
 
-/* CARDS */
+.banner button {
+    font-size: 0.7em;
+    margin-top: 2.5em;
+    padding: 0.2em 0.5em;
+    background-color: #f68235;
+    color: white;
+    border-radius: 0.3em;
+    border-color: #f68235;
+}
 
+
+.banner button:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px #ffffff;
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+/* CARDS */
 
 .cards-wrapper {
     display: flex;
@@ -175,6 +197,11 @@
         font-size: 1.3em;
     }
 
+    .banner button {
+        font-size: 1em;
+        padding: 0.3em 0.8em;
+    }
+
 }
 
 
@@ -209,6 +236,12 @@
         font-size: 1.5em;
         padding: 0.2em 0.6em;
     }
+
+
+    .banner button {
+        font-size: 1em;
+        padding: 0.3em 1em;
+    }
 }
 
 
@@ -242,6 +275,12 @@
 
     .cards-wrapper {
         margin-bottom: 5em;
+    }
+
+
+    .banner button {
+        font-size: 1.2em;
+        padding: 0.3em 1em;
     }
 }
 

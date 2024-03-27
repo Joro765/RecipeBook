@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="form-wrapper">
+        <div class="title">
+            <h2>Create Your Own Recipe</h2>
+        </div>
+        <form #form="ngForm" (ngSubmit)="submit(form)">
+            <div class="form-group">
+                <label for="title">Recipe Title</label>
+                <input type="text" id="title" name="title" ngModel #inputTitle="ngModel" required
+                    placeholder="enter recipe title...">
+
+                <ng-container *ngIf="inputTitle.touched">
+                    <p class="error" *ngIf="inputTitle.errors?.['required']">Title is required!</p>
+                </ng-container>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="image">Recipe Picture</label>
+                <input type="text" id="image" name="image" ngModel #inputImage="ngModel" required
+                    placeholder="enter img url...">
+
+                <ng-container *ngIf="inputImage.touched">
+                    <p class="error" *ngIf="inputImage.errors?.['required']">Image URL is required!</p>
+                </ng-container>
+            </div>
+
+
+
+
+            <div class="selectors">
+                <div class="form-group">
+                    <label for="difficulty">Cooking Difficulty</label>
+                    <select name="difficulty" id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="servings">Serving Size</label>
+                    <select name="servings" id="servings">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Cooking Time</label>
+                    <input type="text" id="time" name="time" ngModel #inputTime="ngModel" placeholder="enter minutes..."
+                        required inputmode="numeric" pattern="[0-9]+">
+
+                    <ng-container *ngIf="inputTime.touched">
+                        <p class="error" *ngIf="inputTime.errors?.['required']">Time is required!</p>
+                        <p class="error"
+                            *ngIf="inputTime.errors?.['pattern'] || inputTime.value == 0 && inputTime.value.length > 0">
+                            Only numbers
+                            allowed!</p>
+                    </ng-container>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="description">Recipe Description</label>
+                <textarea name="description" id="description" ngModel #inputDescription="ngModel" required
+                    placeholder="enter a brief description..."></textarea>
+
+                <ng-container *ngIf="inputDescription.touched">
+                    <p class="error" *ngIf="inputDescription.errors?.['required']">Description is required!</p>
+                </ng-container>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="ingredients">Igredients</label>
+                <textarea name="ingredients" id="ingredients" ngModel #inputIngredients="ngModel" required
+                    placeholder="each ingredient on a new line..."></textarea>
+
+                <ng-container *ngIf="inputIngredients.touched">
+                    <p class="error" *ngIf="inputIngredients.errors?.['required']">Ingredients are required!</p>
+                </ng-container>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="steps">Cooking Steps</label>
+                <textarea name="steps" id="steps" ngModel #inputSteps="ngModel" required
+                    placeholder="each step on a new line..."></textarea>
+
+                <ng-container *ngIf="inputSteps.touched">
+                    <p class="error" *ngIf="inputSteps.errors?.['required']">Steps are required!</p>
+                </ng-container>
+            </div>
+
+
+            <button [disabled]="form.invalid">Submit Recipe</button>
+
+        </form>
+    </div>
+</div>

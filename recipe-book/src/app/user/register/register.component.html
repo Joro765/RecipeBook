@@ -57,7 +57,7 @@
                     </p>
                 </ng-container>
             </div>
-            <button>Register</button>
+            <button [disabled]="form.invalid || inputConfirmPassword.value != inputPassword.value">Register</button>
             <p class="text">Have an account?<a routerLink="/login">Login</a></p>
         </form>
     </div>

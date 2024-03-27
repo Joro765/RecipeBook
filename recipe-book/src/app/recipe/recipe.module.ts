@@ -5,19 +5,22 @@ import { RecipeRoutingModule } from './recipe-routing.module';
 import { WelcomeMsgComponent } from '../shared/welcome-msg/welcome-msg.component';
 import { SharedModule } from '../shared/shared.module';
 import { CurrentRecipeComponent } from './current-recipe/current-recipe.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
     RecipeListComponent,
-    CurrentRecipeComponent
+    CurrentRecipeComponent,
+    AddRecipeComponent
   ],
   imports: [
     CommonModule,
     RecipeRoutingModule,
-    SharedModule
-
+    SharedModule,
+    FormsModule
   ],
   exports: [RecipeListComponent]
 })

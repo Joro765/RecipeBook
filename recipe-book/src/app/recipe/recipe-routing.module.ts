@@ -7,7 +7,7 @@ import { CurrentRecipeComponent } from './current-recipe/current-recipe.componen
 const routes: Routes = [{
     path: "recipes", children: [
         { path: "", pathMatch: "full", component: RecipeListComponent },
-        { path: ":recipeId", component: CurrentRecipeComponent }
+        { path: ":recipeId", component: CurrentRecipeComponent },
     ]
 }];
 
