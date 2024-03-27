@@ -1,0 +1,112 @@
+/* Profile view */
+
+.profile-wrapper {
+    margin: 5em auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f5f5;
+    border: 2px solid #f68235;
+    border-radius: 0.3em;
+}
+
+
+.media {
+    background-color: #f6f5f5;
+}
+
+.media {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    gap: 1em;
+    height: 300px;
+    flex: 1 1 auto;
+}
+
+.info span {
+    font-weight: bold;
+    margin-left: 0.2em;
+}
+
+.info h1 {
+    font-size: 2em;
+    text-decoration: underline;
+    padding: 0;
+}
+
+
+.info .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+
+
+
+/* YOUR RECIPES MSG */
+
+.empty-msg {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.empty-msg h3 {
+    padding: 0;
+}
+
+
+/* YOUR RECIPES CARDS */
+
+/* TODO */
+
+
+
+@media (min-width: 500px) {
+    .info {
+        font-size: 1em;
+    }
+
+    .info h1 {
+        font-size: 2em;
+    }
+}
+
+
+
+@media (min-width: 700px) {
+    .profile-wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .media {
+        padding: 1em;
+        border-right: 2px solid #ccc;
+    }
+}
+
+
+
+@media (min-width: 800px) {
+    .info {
+        font-size: 1em;
+    }
+
+    .info h1 {
+        font-size: 2.5em;
+    }
+}
