@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -12,7 +13,12 @@ export class RecipeListComponent implements OnInit {
   isLoading: boolean = false;
 
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private userService: UserService) { }
+
+
+  get isLoggedIn(): boolean {
+    return this.userService.isLogged;
+  }
 
 
 

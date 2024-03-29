@@ -18,6 +18,14 @@ export class RegisterComponent {
       return;
     }
 
-    console.log(form.value);
+    const { email, username, password } = form.value;
+
+
+    this.userService.register(email, username, password).subscribe((data) => {
+      this.userService.addToLocalStorage(data);
+      this.router.navigate(["/home"])
+
+    })
   }
+
 }

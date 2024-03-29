@@ -1,6 +1,6 @@
 <div class="container">
-    <!-- <app-welcome-msg></app-welcome-msg> -->
-    <div class="banner site">
+    <app-welcome-msg *ngIf="!isLoggedIn"></app-welcome-msg>
+    <div class="banner site" *ngIf="isLoggedIn">
         <h1>Calling all culinary creators! </h1>
         <p>Share the love, the flavor, and the joy of cooking by submitting your recipe to <span>RecipeBook</span>
             today.</p>

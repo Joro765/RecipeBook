@@ -2,7 +2,7 @@
     <section class="site-header">
         <p class="logo"><a routerLink="/home">RecipeBook.</a></p>
     </section>
-    <nav *ngIf="isLogged">
+    <nav *ngIf="isLoggedIn">
         <ul>
             <li>
                 <a routerLink="/recipes">Recipes</a>
@@ -11,11 +11,11 @@
                 <a routerLink="/profile">Profile</a>
             </li>
             <li>
-                <a href="">Log out</a>
+                <a (click)="logout()">Log out</a>
             </li>
         </ul>
     </nav>
-    <nav *ngIf="!isLogged">
+    <nav *ngIf="!isLoggedIn">
         <ul>
             <li>
                 <a routerLink="/recipes">Recipes</a>

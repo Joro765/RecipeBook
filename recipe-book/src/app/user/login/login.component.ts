@@ -19,7 +19,13 @@ export class LoginComponent {
       return;
     }
 
-    console.log(form.value);
+    const { email, password } = form.value;
+
+
+    this.userService.login(email, password).subscribe((data) => {
+      this.userService.addToLocalStorage(data);
+      this.router.navigate(["/home"])
+    })
 
   }
 }
