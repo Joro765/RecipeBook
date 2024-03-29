@@ -19,7 +19,7 @@
                     <p class="category">{{recipe.category}}</p>
                 </div>
                 <div class="recipe-title">
-                    <p>{{recipe.name}}</p>
+                    <p>{{(recipe.name.length > 20)? (recipe.name | slice:0:20) + "...":(recipe.name)}}</p>
                 </div>
             </div>
         </div>
