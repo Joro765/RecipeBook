@@ -60,7 +60,16 @@ export class ApiService {
         'Content-type': 'application/json'
       }
     });
+  }
 
+  deleteRecipe(id: string) {
+    const api = this.apiUrl;
+    return this.http.delete(`${api}/recipes/${id}`, {
+      headers: {
+        'X-Authorization': this.userService.user?.accessToken ?? "",
+        'Content-type': 'application/json'
+      }
+    });
   }
 
 }

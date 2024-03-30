@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Recipe } from 'src/app/types/Recipe';
 import { UserService } from 'src/app/user/user.service';
 
@@ -15,7 +15,7 @@ export class CurrentRecipeComponent implements OnInit {
   isLoading: boolean = false;
   isOwner: boolean = false;
 
-  constructor(private api: ApiService, private route: ActivatedRoute, private userService: UserService) { }
+  constructor(private api: ApiService, private route: ActivatedRoute, private userService: UserService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -35,4 +35,13 @@ export class CurrentRecipeComponent implements OnInit {
 
     })
   }
+
+  deleteRecipe() {
+    this.api.deleteRecipe(this.recipeId).subscribe();
+    alert("Recipe deleted!")
+    this.router.navigate(["/recipes"]);
+  }
+
+
+
 }
