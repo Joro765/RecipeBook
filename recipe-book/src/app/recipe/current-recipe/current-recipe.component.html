@@ -7,7 +7,7 @@
             <h3>{{recipe.name}}</h3>
             <p>{{recipe.description}}</p>
             <div class="icons">
-                <p><i class="fa-solid fa-clock fa-xl"></i> {{recipe.time}}</p>
+                <p><i class="fa-solid fa-clock fa-xl"></i> {{recipe.time}} mins</p>
                 <p><i class="fa-solid fa-kitchen-set fa-xl"></i> {{recipe.difficulty}}</p>
                 <p><i class="fa-solid fa-utensils fa-xl"></i> {{recipe.servings}} people</p>
             </div>
@@ -31,6 +31,11 @@
                 <li *ngFor="let step of recipe.steps">{{step}}</li>
             </ul>
         </div>
+    </div>
+
+    <div class="buttons" *ngIf="isOwner">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
     </div>
 
 

@@ -115,12 +115,7 @@ button:disabled {
 
 
 
-@media (min-width:500px) {}
-
-
-
-
-@media (min-width:700px) {
+@media (min-width:1000px) {
     form .selectors {
         flex-direction: row;
         justify-content: center;

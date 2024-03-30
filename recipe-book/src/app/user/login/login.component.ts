@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { NgForm } from '@angular/forms';
+import { UserAuth } from 'src/app/types/User';
 
 @Component({
   selector: 'app-login',
@@ -22,10 +23,13 @@ export class LoginComponent {
     const { email, password } = form.value;
 
 
+
     this.userService.login(email, password).subscribe((data) => {
       this.userService.addToLocalStorage(data);
-      this.router.navigate(["/home"])
+      this.router.navigate(["/home"]);
+      form.reset();
     })
+
 
   }
 }

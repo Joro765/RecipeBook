@@ -39,6 +39,10 @@ export class UserService {
   }
 
 
+  getUserToken() {
+    const token = this.user?.accessToken;
+    return token;
+  }
 
 
   login(email: string, password: string) {

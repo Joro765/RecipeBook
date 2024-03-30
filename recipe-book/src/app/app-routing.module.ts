@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "/home" },
   { path: "home", component: HomeComponent },
   { path: "home/:recipeId", redirectTo: "/recipes/:recipeId" },
+  { path: "profile/:recipeId", redirectTo: "/recipes/:recipeId" },
   { path: "add-recipe", component: AddRecipeComponent },
   { path: "**", redirectTo: "/404" },
   { path: "404", component: ErrorPageComponent }

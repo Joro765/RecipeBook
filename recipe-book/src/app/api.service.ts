@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Recipe } from './types/Recipe';
+import { UserService } from './user/user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { Recipe } from './types/Recipe';
 export class ApiService {
   apiUrl = 'http://localhost:3030/data';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private userService: UserService) { }
 
 
   // top recipes for home page
@@ -39,4 +40,27 @@ export class ApiService {
     const api = this.apiUrl;
     return this.http.get<Recipe>(`${api}/recipes/${id}`)
   }
+
+
+
+  // get user added recipes
+  getUserRecipes(id: string) {
+    const api = this.apiUrl;
+    return this.http.get(`${api}/recipes?where=_ownerId%3D%22${id}%22`);
+  }
+
+
+
+  // Add recipe by authorized user
+  addRecipe(data: Recipe) {
+    const api = this.apiUrl;
+    return this.http.post(`${api}/recipes`, data, {
+      headers: {
+        'X-Authorization': this.userService.user?.accessToken ?? "",
+        'Content-type': 'application/json'
+      }
+    });
+
+  }
+
 }

@@ -32,7 +32,7 @@
             <div class="selectors">
                 <div class="form-group">
                     <label for="difficulty">Cooking Difficulty</label>
-                    <select name="difficulty" id="difficulty">
+                    <select name="difficulty" id="difficulty" ngModel #inputDifficulty="ngModel">
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
                         <option value="hard">Hard</option>
@@ -42,13 +42,27 @@
 
                 <div class="form-group">
                     <label for="servings">Serving Size</label>
-                    <select name="servings" id="servings">
+                    <select name="servings" id="servings" ngModel #inputServings="ngModel">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select name="category" id="category" ngModel #inputCategory="ngModel">
+                        <option value="soup">Soup</option>
+                        <option value="side">Side</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="pasta">Pasta</option>
+                        <option value="sandwich">Sandwich</option>
+                        <option value="beef">Beef</option>
+                        <option value="pork">Pork</option>
                     </select>
                 </div>
 

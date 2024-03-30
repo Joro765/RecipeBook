@@ -6,8 +6,8 @@
         <div class="info">
             <h1>User Info</h1>
             <div class="content">
-                <p>Username: <span>Joro765</span></p>
-                <p>Email: <span>jorogeorgiev765@gmail.com</span></p>
+                <p>Username: <span>{{userName}}</span></p>
+                <p>Email: <span>{{userEmail}}</span></p>
             </div>
         </div>
     </div>
@@ -16,7 +16,23 @@
 
 <div class="container">
     <h2>Manage Your Recipes</h2>
-    <div class="empty-msg">
+    <div class="empty-msg" *ngIf="recipes.length < 1">
         <h3>You have not uploaded any recipes yet!</h3>
+    </div>
+    <div class="cards-wrapper" *ngIf="recipes">
+        <div class="cards">
+            <div class="card" *ngFor="let recipe of recipes">
+                <div class="media">
+                    <a [routerLink]="recipe._id">
+                        <img *ngIf="recipe.img.length > 1" src={{recipe.img}} alt="">
+                        <img *ngIf="recipe.img < 1" src='../../assets/no-image.jpg' alt="">
+                    </a>
+                    <p class="category">{{recipe.category}}</p>
+                </div>
+                <div class="recipe-title">
+                    <p>{{(recipe.name.length > 20)? (recipe.name | slice:0:20) + "...":(recipe.name)}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
