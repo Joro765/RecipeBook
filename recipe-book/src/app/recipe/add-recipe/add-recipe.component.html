@@ -7,10 +7,11 @@
             <div class="form-group">
                 <label for="title">Recipe Title</label>
                 <input type="text" id="title" name="title" ngModel #inputTitle="ngModel" required
-                    placeholder="enter recipe title...">
+                    placeholder="enter recipe title..." minlength="5" maxlength="30">
 
                 <ng-container *ngIf="inputTitle.touched">
                     <p class="error" *ngIf="inputTitle.errors?.['required']">Title is required!</p>
+                    <p class="error" *ngIf="inputTitle.errors?.['minlength']">Title must be at least 5 characters!</p>
                 </ng-container>
             </div>
 
@@ -33,9 +34,9 @@
                 <div class="form-group">
                     <label for="difficulty">Cooking Difficulty</label>
                     <select name="difficulty" id="difficulty" ngModel #inputDifficulty="ngModel">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
+                        <option value="easy">easy</option>
+                        <option value="medium">medium</option>
+                        <option value="hard">hard</option>
                     </select>
                 </div>
 
@@ -55,21 +56,22 @@
                 <div class="form-group">
                     <label for="category">Category</label>
                     <select name="category" id="category" ngModel #inputCategory="ngModel">
-                        <option value="soup">Soup</option>
-                        <option value="side">Side</option>
-                        <option value="dessert">Dessert</option>
-                        <option value="seafood">Seafood</option>
-                        <option value="pasta">Pasta</option>
-                        <option value="sandwich">Sandwich</option>
-                        <option value="beef">Beef</option>
-                        <option value="pork">Pork</option>
+                        <option value="soup">soup</option>
+                        <option value="soup">salad</option>
+                        <option value="side">side</option>
+                        <option value="dessert">dessert</option>
+                        <option value="seafood">seafood</option>
+                        <option value="pasta">pasta</option>
+                        <option value="sandwich">sandwich</option>
+                        <option value="beef">beef</option>
+                        <option value="pork">pork</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="time">Cooking Time</label>
                     <input type="text" id="time" name="time" ngModel #inputTime="ngModel" placeholder="enter minutes..."
-                        required inputmode="numeric" pattern="[0-9]+">
+                        required inputmode="numeric" pattern="[0-9]+" maxlength="3">
 
                     <ng-container *ngIf="inputTime.touched">
                         <p class="error" *ngIf="inputTime.errors?.['required']">Time is required!</p>
@@ -86,7 +88,7 @@
             <div class="form-group">
                 <label for="description">Recipe Description</label>
                 <textarea name="description" id="description" ngModel #inputDescription="ngModel" required
-                    placeholder="enter a brief description..."></textarea>
+                    maxlength="200" placeholder="enter a brief description..."></textarea>
 
                 <ng-container *ngIf="inputDescription.touched">
                     <p class="error" *ngIf="inputDescription.errors?.['required']">Description is required!</p>
@@ -99,7 +101,7 @@
             <div class="form-group">
                 <label for="ingredients">Igredients</label>
                 <textarea name="ingredients" id="ingredients" ngModel #inputIngredients="ngModel" required
-                    placeholder="each ingredient on a new line..."></textarea>
+                    maxlength="100" placeholder="each ingredient on a new line..."></textarea>
 
                 <ng-container *ngIf="inputIngredients.touched">
                     <p class="error" *ngIf="inputIngredients.errors?.['required']">Ingredients are required!</p>
@@ -110,7 +112,7 @@
 
             <div class="form-group">
                 <label for="steps">Cooking Steps</label>
-                <textarea name="steps" id="steps" ngModel #inputSteps="ngModel" required
+                <textarea name="steps" id="steps" ngModel #inputSteps="ngModel" required maxlength="100"
                     placeholder="each step on a new line..."></textarea>
 
                 <ng-container *ngIf="inputSteps.touched">

@@ -20,7 +20,6 @@ export class AddRecipeComponent {
       return;
     }
 
-
     const steps = form.value.steps.split("\n");
     const ingredients = form.value.ingredients.split("\n");
 
@@ -33,8 +32,8 @@ export class AddRecipeComponent {
       time: form.value.time,
       servings: form.value.servings,
       img: form.value.image,
-      ingredients: ingredients,
-      steps: steps
+      ingredients: this.filterArray(ingredients),
+      steps: this.filterArray(steps)
     } as Recipe;
 
 
@@ -43,19 +42,29 @@ export class AddRecipeComponent {
       this.router.navigate(["/recipes"]);
       form.reset();
     })
-
-
-
-
   }
+
+
+  // Remove empty rows
+  // formatArrays(arr: []) {
+  //   let resArr: [] = [];
+  //   for (let i = 0; i < arr.length; i++) {
+  //     if (arr[i]) {
+  //       resArr.push(arr[i]);;
+  //     }
+  //   }
+  //   return resArr;
+  // }
+
+
+  filterArray(arr: []) {
+    return arr.filter(n => n);
+  }
+
+
 }
 
 
-
-// const ingredients = form.value.ingredients.split("/");
-//     for (const ingredient of ingredients) {
-//       console.log(ingredient);
-//     }
 
 
 
