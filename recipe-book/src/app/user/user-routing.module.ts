@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
+import { authActivate } from '../guards/auth.activate';
+import { authDeactivate } from '../guards/auth.deactivate';
 
-const routes: Routes = [{ path: "login", component: LoginComponent },
-{ path: "register", component: RegisterComponent },
-{ path: "profile", component: ProfileComponent }];
+const routes: Routes = [{ path: "login", component: LoginComponent, canActivate: [authDeactivate] },
+{ path: "register", component: RegisterComponent, canActivate: [authDeactivate] },
+{ path: "profile", component: ProfileComponent, canActivate: [authActivate] }];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
