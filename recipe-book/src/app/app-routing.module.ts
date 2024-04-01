@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: "home/:recipeId", redirectTo: "/recipes/:recipeId" },
   { path: "profile/:recipeId", redirectTo: "/recipes/:recipeId" },
   { path: "add-recipe", component: AddRecipeComponent, canActivate: [authActivate] },
+  { path: "edit-recipe/:recipeId", redirectTo: "/recipes/edit-recipe/:recipeId" },
   { path: "**", redirectTo: "/404" },
   { path: "404", component: ErrorPageComponent }
 ];

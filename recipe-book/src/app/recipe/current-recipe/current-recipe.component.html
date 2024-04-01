@@ -34,7 +34,7 @@
     </div>
 
     <div class="buttons" *ngIf="isOwner">
-        <button class="edit">Edit</button>
+        <button class="edit" routerLink="/edit-recipe/{{recipe._id}}">Edit</button>
         <button class="delete" (click)="deleteRecipe()">Delete</button>
     </div>
 

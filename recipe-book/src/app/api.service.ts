@@ -62,9 +62,22 @@ export class ApiService {
     });
   }
 
+  // Delete recipe by authorized user and owner
   deleteRecipe(id: string) {
     const api = this.apiUrl;
     return this.http.delete(`${api}/recipes/${id}`, {
+      headers: {
+        'X-Authorization': this.userService.user?.accessToken ?? "",
+        'Content-type': 'application/json'
+      }
+    });
+  }
+
+
+  // Edit recipe by authorized user and owner
+  editRecipe(data: Recipe, id: string) {
+    const api = this.apiUrl;
+    return this.http.put(`${api}/recipes/${id}`, data, {
       headers: {
         'X-Authorization': this.userService.user?.accessToken ?? "",
         'Content-type': 'application/json'

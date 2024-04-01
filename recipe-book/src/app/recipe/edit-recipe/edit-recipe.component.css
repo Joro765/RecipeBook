@@ -1,0 +1,138 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto;
+    max-width: 1000px;
+    border: 2px solid #f68235;
+    border-radius: 0.3em;
+    background-color: #f6f5f5;
+}
+
+
+.form-wrapper .title {
+    width: 100%;
+    text-align: center;
+    background-color: #f68235;
+    color: rgb(255, 255, 255);
+}
+
+
+.form-wrapper .title h2 {
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: 1em;
+}
+
+
+form {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    width: 100%;
+}
+
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 700px;
+    min-height: 80px;
+}
+
+
+form .form-group input {
+    width: 100%;
+}
+
+
+form .selectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+
+form .selectors .form-group {
+    max-width: 150px;
+    min-height: 120px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.form-group textarea {
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+}
+
+
+.form-group:has(textarea) {
+    height: 150px;
+}
+
+
+form .buttons {
+    display: flex;
+    gap: 1em;
+
+}
+
+
+form button {
+    background-color: #f68235;
+    color: white;
+    border-radius: 0.3em;
+    border-color: #f68235;
+    padding: 0.1em 0.4em;
+}
+
+
+
+form button:hover {
+    text-shadow: 0 0 5px #ffffff;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+p.error {
+    font-size: 0.8em;
+    color: red;
+}
+
+button:disabled {
+    opacity: 0.3;
+    cursor: none;
+}
+
+
+
+@media (min-width:1000px) {
+    form .selectors {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .buttons {
+        gap: 3em;
+    }
+
+    .buttons button {
+        padding: 0.2em 1em;
+    }
+}

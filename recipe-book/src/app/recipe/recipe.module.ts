@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CurrentRecipeComponent } from './current-recipe/current-recipe.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { FormsModule } from '@angular/forms';
+import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
 
 
 
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     RecipeListComponent,
     CurrentRecipeComponent,
-    AddRecipeComponent
+    AddRecipeComponent,
+    EditRecipeComponent
   ],
   imports: [
     CommonModule,
